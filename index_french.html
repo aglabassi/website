@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Candidat au Doctorat - Abdel Ghani Labassi</title>
+  <title>Candidat au doctorat - Abdel Ghani Labassi</title>
   <link rel="stylesheet" href="styles.css">
   <style>
     body {
@@ -16,6 +16,7 @@
       color: #ffffff;
       padding: 20px;
       text-align: center;
+      position: relative;
     }
     header img.profile-picture {
       width: 100px;
@@ -23,6 +24,17 @@
       border-radius: 50%;
       display: block;
       margin: 0 auto 10px;
+    }
+    .english-link {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ffffff;
+      color: #4B5320;
+      padding: 5px 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
     }
     footer {
       background-color: #333;
@@ -49,33 +61,21 @@
       margin: 0 auto;
       padding: 20px;
     }
-    .english-link {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background-color: #ffffff;
-      color: #4B5320;
-      padding: 5px 10px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
   </style>
 </head>
 <body>
   <header>
-      <a href="index.html" class="english-link">English</a>
+    <a href="index.html" class="english-link">English</a>
     <div class="container">
       <h1>Abdel Ghani Labassi</h1>
-      
-      <p>Candidat au Doctorat en Mathématiques Appliquées et Statistiques</p>
+      <p>Candidat au doctorat en mathématiques appliquées et statistiques</p>
       <nav>
         <ul>
           <li><a href="#bio">Biographie</a></li>
-          <li><a href="#research">Recherche</a></li>
+          <li><a href="#recherche">Recherche</a></li>
           <li><a href="#publications">Publications</a></li>
-          <li><a href="#teaching">Enseignement</a></li>
-          <li><a href="#projects">Projets</a></li>
+          <li><a href="#enseignement">Enseignement</a></li>
+          <li><a href="#projets">Projets</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -84,47 +84,47 @@
 
   <section id="bio" class="container">
     <h2>Biographie</h2>
-    <p>Je poursuis actuellement mon doctorat en Mathématiques Appliquées et Statistiques à l'<a href="https://www.jhu.edu/">Université Johns Hopkins</a>, Baltimore. Mes recherches portent sur l'optimisation et l'apprentissage automatique, en particulier le développement de nouvelles méthodes pour résoudre efficacement des problèmes à grande échelle, sous la supervision de <a href="https://mateodd25.github.io">Mateo Diaz</a>.</p>
-    <p>J'ai obtenu mon MSc en Informatique à l'<a href="https://www.umontreal.ca/">Université de Montréal</a>, où j'ai travaillé avec <a href="https://scholar.google.it/citations?user=udwtIesAAAAJ&hl=en">Andrea Lodi</a> et <a href="https://www.didierchetelat.com">Didier Chetelat</a>. J'ai également obtenu un baccalauréat bidisciplinaire en mathématiques et informatique à l'Université de Montréal. Pendant mes études de premier cycle, j'ai acquis de l'expérience en tant que stagiaire ingénieur logiciel chez <a href="https://noviflow.com/">Noviflow Inc.</a> à Montréal, travaillant sur le développement d'applications web et des projets de visualisation de données. J'ai également contribué à des tâches d'ingénierie de l'apprentissage automatique en tant que stagiaire à l'<a href="https://www.cerist.dz/">Agence CERIST</a> en Algérie.</p>
+    <p>Je poursuis actuellement mon doctorat en mathématiques appliquées et statistiques à l'<a href="https://www.jhu.edu/">université Johns Hopkins</a>, à Baltimore. Mes recherches portent sur l'optimisation et l'apprentissage automatique, en particulier le développement de nouvelles méthodes pour résoudre efficacement des problèmes à grande échelle, sous la supervision de <a href="https://mateodd25.github.io">Mateo Diaz</a>.</p>
+    <p>J'ai obtenu mon MSc en informatique à l'<a href="https://www.umontreal.ca/">université de Montréal</a>, où j'ai travaillé avec <a href="https://scholar.google.it/citations?user=udwtIesAAAAJ&hl=en">Andrea Lodi</a> et <a href="https://www.didierchetelat.com">Didier Chetelat</a>. J'ai également obtenu un baccalauréat bidisciplinaire en mathématiques et informatique à l'université de Montréal. Pendant mes études de premier cycle, j'ai acquis de l'expérience en tant que stagiaire ingénieur logiciel chez <a href="https://noviflow.com/">Noviflow Inc.</a> à Montréal, travaillant sur le développement d'applications web et des projets de visualisation de données. J'ai également contribué à des tâches d'ingénierie de l'apprentissage automatique en tant que stagiaire à l'<a href="https://www.cerist.dz/">agence CERIST</a> en Algérie.</p>
   </section>
 
-  <section id="research" class="container">
+  <section id="recherche" class="container">
     <h2>Recherche</h2>
-    <p>Mes intérêts de recherche sont l'optimisation et les statistiques pour l'apprentissage automatique. Certains de mes projets en cours incluent :</p>
+    <p>Mes intérêts de recherche portent sur l'optimisation et les statistiques pour l'apprentissage automatique. Voici quelques-uns de mes projets en cours :</p>
     <ul>
-      <li><strong>Techniques d'Optimisation Inverse pour l'Interprétabilité des Grands Modèles de Langage :</strong> Investigation de nouvelles techniques pour améliorer l'interprétabilité des grands modèles.</li>
-      <li><strong>Nouvel Algorithme d'Optimisation pour l'Apprentissage Automatique Composite :</strong> Développement de nouveaux algorithmes pour améliorer l'évolutivité des problèmes d'apprentissage automatique.</li>
+      <li><strong>Techniques d'optimisation inverse pour l'interprétabilité des grands modèles de langage :</strong> étude de nouvelles techniques pour améliorer l'interprétabilité des grands modèles.</li>
+      <li><strong>Nouvel algorithme d'optimisation pour l'apprentissage automatique composite :</strong> développement de nouveaux algorithmes pour améliorer l'évolutivité des problèmes d'apprentissage automatique.</li>
     </ul>
   </section>
 
   <section id="publications" class="container">
     <h2>Publications</h2>
     <ul>
-      <li><strong>Apprendre à Comparer les Nœuds dans Branch and Bound avec GNN</strong>, A.G.Labassi, Didier Chetelat, Andrea Lodi. Présenté à NeurIPS, 2022.</li>
+      <li><strong>Apprendre à comparer les nœuds dans Branch and Bound avec GNN</strong>, A.G. Labassi, Didier Chetelat, Andrea Lodi. Présenté à NeurIPS, 2022.</li>
     </ul>
   </section>
 
-  <section id="teaching" class="container">
+  <section id="enseignement" class="container">
     <h2>Enseignement</h2>
     <p>J'ai été assistant d'enseignement pour les cours suivants :</p>
     <ul>
-      <li><strong>Optimisation pour la Finance</strong> - Université Johns Hopkins, 2022-2023</li>
-      <li><strong>Optimisation des Flots de Réseau</strong> - Université Johns Hopkins, 2022-2023</li>
-      <li><strong>Introduction à l'Algorithmique</strong> - Université de Montréal, 2019-2022</li>
+      <li><strong>Optimisation pour la finance</strong> - Université Johns Hopkins, 2022-2023</li>
+      <li><strong>Optimisation des flots de réseau</strong> - Université Johns Hopkins, 2022-2023</li>
+      <li><strong>Introduction à l'algorithmique</strong> - Université de Montréal, 2019-2022</li>
     </ul>
   </section>
 
-  <section id="projects" class="container">
+  <section id="projets" class="container">
     <h2>Projets</h2>
     <ul>
-      <li><strong>Compétition de Classification de Commentaires Reddit sur Kaggle</strong> - Mené une équipe classée 4ème sur 103 équipes en utilisant un modèle BERT.</li>
-      <li><strong>Clustering Non Supervisé de Tweets pour la Santé Mentale</strong> - Collaboration avec Santé Canada pour détecter des signes de dépression et de tendances suicidaires à partir de tweets.</li>
+      <li><strong>Compétition de classification de commentaires Reddit sur Kaggle</strong> - J'ai dirigé une équipe qui s'est classée 4ème sur 103 équipes en utilisant un modèle BERT.</li>
+      <li><strong>Clustering non supervisé de tweets pour la santé mentale</strong> - Collaboration avec Santé Canada pour détecter des signes de dépression et de tendances suicidaires à partir de tweets.</li>
     </ul>
   </section>
 
   <section id="contact" class="container">
     <h2>Contact</h2>
-    <p>Si vous souhaitez me contacter, n'hésitez pas à m'envoyer un email à <a href="mailto:alabass1@jhu.edu">alabass1@jhu.edu</a> ou à m'ajouter sur <a href="https://linkedin.com/in/aglabassi">LinkedIn</a>.</p>
+    <p>Si vous souhaitez me contacter, n'hésitez pas à m'envoyer un courriel à <a href="mailto:alabass1@jhu.edu">alabass1@jhu.edu</a> ou à me connecter sur <a href="https://linkedin.com/in/aglabassi">LinkedIn</a>.</p>
   </section>
 
   <footer>
