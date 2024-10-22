@@ -28,8 +28,8 @@ header p {
 }
 
 header img.profile-picture-square {
-  width: 80px; /* Adjust size of the square image */
-  height: 80px;
+  width: 150px; /* Adjusted size for bigger image */
+  height: 150px;
   position: absolute;
   top: 10px;
   left: 10px;
