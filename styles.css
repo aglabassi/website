@@ -14,7 +14,6 @@ header {
   background-color: #4B5320; /* Military green background */
   color: #ffffff;
   padding: 20px 0;
-  text-align: center;
   position: relative;
 }
 
@@ -27,14 +26,15 @@ header p {
   font-size: 1.2em;
 }
 
-header img.profile-picture-movable {
+header img.profile-picture-aligned {
   width: 12vw; /* Responsive width */
   max-width: 150px; /* Max width */
   height: auto; /* Maintain aspect ratio */
   position: absolute;
-  top: 10px;
-  left: 10px;
-  border-radius: 5px; /* Slightly rounded corners for a square */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  left: 5%; /* Align image to match Bio section */
+  border-radius: 5px; /* Slightly rounded corners */
 }
 
 nav ul {
@@ -97,34 +97,17 @@ footer p {
 }
 
 @media (max-width: 768px) {
-  header img.profile-picture-movable {
+  header img.profile-picture-aligned {
     width: 20vw; /* Adjust width for smaller screens */
-    max-width: 100px; /* Reduce max width */
-  }
-  header h1 {
-    font-size: 2em;
-  }
-  header p {
-    font-size: 1em;
-  }
-  nav ul li a {
-    font-size: 0.9em;
+    max-width: 100px;
+    left: 3%;
   }
 }
 
 @media (max-width: 480px) {
-  header img.profile-picture-movable {
-    width: 30vw; /* Adjust width for very small screens */
-    max-width: 80px; /* Further reduce max width */
-  }
-  header h1 {
-    font-size: 1.5em;
-  }
-  header p {
-    font-size: 0.9em;
-  }
-  nav ul li {
-    display: block;
-    margin: 5px 0;
+  header img.profile-picture-aligned {
+    width: 30vw;
+    max-width: 80px;
+    left: 2%;
   }
 }
