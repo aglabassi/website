@@ -13,28 +13,33 @@ body {
 header {
   background-color: #4B5320; /* Military green background */
   color: #ffffff;
-  padding: 20px 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
+}
+
+header img.profile-picture {
+  width: 12vw; /* Responsive width */
+  max-width: 150px; /* Max width */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 20px; /* Add space from the left edge */
+  border-radius: 5px; /* Slightly rounded corners */
+}
+
+.header-content {
+  flex-grow: 1;
+  text-align: center;
 }
 
 header h1 {
   font-size: 2.5em;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 header p {
   font-size: 1.2em;
-}
-
-header img.profile-picture-aligned {
-  width: 12vw; /* Responsive width */
-  max-width: 150px; /* Max width */
-  height: auto; /* Maintain aspect ratio */
-  position: absolute;
-  top: 50%; /* Center vertically */
-  transform: translateY(-50%); /* Adjust for perfect centering */
-  left: 5%; /* Align image to match Bio section */
-  border-radius: 5px; /* Slightly rounded corners */
 }
 
 nav ul {
@@ -97,17 +102,23 @@ footer p {
 }
 
 @media (max-width: 768px) {
-  header img.profile-picture-aligned {
+  header img.profile-picture {
     width: 20vw; /* Adjust width for smaller screens */
     max-width: 100px;
-    left: 3%;
+  }
+
+  header h1 {
+    font-size: 2em;
   }
 }
 
 @media (max-width: 480px) {
-  header img.profile-picture-aligned {
-    width: 30vw;
+  header img.profile-picture {
+    width: 30vw; /* Adjust width for very small screens */
     max-width: 80px;
-    left: 2%;
+  }
+
+  header h1 {
+    font-size: 1.5em;
   }
 }
