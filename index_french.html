@@ -14,16 +14,28 @@
     header {
       background-color: #4B5320; /* Fond vert militaire pour l'en-tête */
       color: #ffffff;
-      padding: 20px;
-      text-align: center;
+      padding: 30px 20px; /* Augmentation de la hauteur de l'en-tête */
+      display: flex;
+      align-items: center;
       position: relative;
     }
     header img.profile-picture {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto 10px;
+      width: 18vw; /* Largeur responsive augmentée */
+      max-width: 200px; /* Taille maximale de l'image plus grande */
+      height: auto; /* Maintien du ratio d'aspect */
+      margin-left: 20px; /* Espace à gauche */
+      border-radius: 5px; /* Coins légèrement arrondis */
+    }
+    .header-content {
+      flex-grow: 1;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3em; /* Taille de police plus grande */
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.5em; /* Taille de police augmentée */
     }
     .english-link {
       position: absolute;
@@ -35,14 +47,6 @@
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
-    }
-    footer {
-      background-color: #333;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1, footer p {
-      color: #ffffff;
     }
     nav ul {
       list-style: none;
@@ -61,12 +65,19 @@
       margin: 0 auto;
       padding: 20px;
     }
+    footer {
+      background-color: #333;
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+    }
   </style>
 </head>
 <body>
   <header>
+    <img src="your-photo.jpg" alt="Photo de profil" class="profile-picture">
     <a href="index.html" class="english-link">English</a>
-    <div class="container">
+    <div class="header-content">
       <h1>Abdel Ghani Labassi</h1>
       <p>Candidat au doctorat en mathématiques appliquées et statistiques</p>
       <nav>
@@ -81,6 +92,7 @@
       </nav>
     </div>
   </header>
+
 
   <section id="bio" class="container">
     <h2>Biographie</h2>
