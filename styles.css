@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +15,7 @@ header {
   color: #ffffff;
   padding: 20px 0;
   text-align: center;
+  position: relative;
 }
 
 header h1 {
@@ -27,12 +27,13 @@ header p {
   font-size: 1.2em;
 }
 
-header img.profile-picture {
-  width: 150px; /* Adjust image size */
-  height: 150px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 15px; /* Center the image with margin */
+header img.profile-picture-square {
+  width: 80px; /* Adjust size of the square image */
+  height: 80px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 5px; /* Slightly rounded corners for a square */
 }
 
 nav ul {
@@ -80,4 +81,16 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+.french-link {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ffffff;
+  color: #4B5320;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
 }
