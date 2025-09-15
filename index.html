@@ -7,7 +7,229 @@
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PhD Candidate - Abdel Ghani Labassi</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* SF Pro Font Stack applied to all elements */
+    * {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", system-ui, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+ header {
+  background: linear-gradient(135deg, #16a34a 0%, #0891b2 100%);  /* Even less bright */
+  color: white;
+  padding: 40px 0;
+  position: relative;
+}
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center top;   /* Show more from the top */
+        border: 4px solid white;
+        position: absolute;
+        top: 70px;
+        left: 300px;
+        transform: scale(1.2);
+}
+
+    .french-link {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 1px solid white;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .french-link:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .header-content {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    h1 {
+      font-size: 3.5em;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .header-content p {
+      font-size: 1.4em;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    /* Social Links Styling */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      color: white;
+      text-decoration: none;
+      transition: transform 0.3s ease, color 0.3s ease;
+      padding: 8px;
+    }
+
+    .social-link:hover {
+      transform: scale(1.25);
+      color: #f0f0f0;
+    }
+
+    .social-link svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+
+    h2 {
+  color: #4a5568;
+  border-bottom: none;
+  padding-bottom: 10px;
+  margin-top: 0;
+  font-weight: 600;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #16a34a 0%, #0891b2 100%);  /* Muted gradient */
+}
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    nav li {
+      margin: 0 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f0f0f0;
+    }
+
+    section {
+      background: white;
+      margin: 20px auto;           /* Centered with auto margins */
+      padding: 40px;
+      border-radius: 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      max-width: 1000px;           /* Same max-width as container */
+    }
+
+    a {
+  color: #0891b2;              /* Changed from #06b6d4 to #0891b2 */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+    ul li {
+      margin-bottom: 10px;
+    }
+
+   footer {
+  background: linear-gradient(135deg, #22c55e 0%, #06b6d4 100%);  /* Same gradient as header */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 80px;
+}
+
+
+    @media (max-width: 800px) {
+      .profile-picture {
+        position: static;
+        display: block;
+        margin: 0 auto 30px;
+        transform: none;
+      }
+
+      .french-link {
+        position: static;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      .header-content {
+        margin-top: 20px;
+      }
+
+      .social-links {
+        margin-top: 15px;
+        gap: 15px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav li {
+        margin: 5px 0;
+      }
+
+      h1 {
+        font-size: 2.5em;
+      }
+
+      .header-content p {
+        font-size: 1.2em;
+      }
+
+      section {
+        margin: 60px 20px;          /* Add side margins on mobile */
+        padding: 30px;
+        max-width: none;            /* Remove max-width constraint on mobile */
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -16,66 +238,105 @@
     <div class="header-content">
       <h1>Abdel Ghani Labassi</h1>
       <p>PhD Candidate in Applied Mathematics and Statistics</p>
-      <nav>
-        <ul>
-          <li><a href="#bio">Bio</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#teaching">Teaching</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      
+      <!-- Social Links Section -->
+      <div class="social-links">
+        <!-- Email -->
+        <a href="mailto:alabass1@jhu.edu" 
+           class="social-link" 
+           target="_blank" 
+           aria-label="Email" 
+           rel="me noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/>
+          </svg>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/aglabassi" 
+           class="social-link" 
+           target="_blank" 
+           aria-label="GitHub" 
+           rel="me noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+            <path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+          </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/aglabassi1" 
+           class="social-link" 
+           target="_blank" 
+           aria-label="LinkedIn" 
+           rel="me noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+          </svg>
+        </a>
+
+        <!-- Google Scholar -->
+        <a href="https://scholar.google.com/citations?user=5hPZvQcAAAAJ&hl=en" 
+           class="social-link" 
+           target="_blank" 
+           aria-label="Google Scholar" 
+           rel="me noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+            <path fill="currentColor" d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </header>
 
-  <section id="bio" class="container">
+  <!-- Remove the "container" class from sections since we're handling centering in the section CSS -->
+  <section id="bio">
     <h2>Bio</h2>
-    <p>I am currently pursuing my PhD in the <a href="https://engineering.jhu.edu/ams/">Applied Mathematics and Statistics Department </a> at <a href="https://www.jhu.edu/"> The Johns Hopkins University</a>, Baltimore, Maryland, USA. My research focuses on optimization and machine learning, particularly in developing new methods to solve large-scale problems efficiently, under the supervision of <a href="https://mateodd25.github.io">Mateo Díaz</a>.</p>
-    <p>I completed my MSc in Computer Science in the <a href="https://diro.umontreal.ca/english/home/">   Department of Copmuter Science and Operations Research </a> at <a href="https://www.umontreal.ca/">Université de Montréal</a>, Québec, Canada, where I worked with <a href="https://scholar.google.it/citations?user=udwtIesAAAAJ&hl=en">Andrea Lodi</a> and <a href="https://www.didierchetelat.com">Didier Chetelat</a>. In addition, I obtained a double major BSc in Computer Science and Mathematics from the same department.
-
-  <section id="research" class="container">
-    <h2>Research Interest </h2>
-    <p> Optimization and machine learning. </p></p>
+    <p>I am currently pursuing a PhD in the <a href="https://engineering.jhu.edu/ams/" target="_blank">Applied Mathematics and Statistics Department </a> at <a href="https://www.jhu.edu/" target="_blank"> Johns Hopkins University</a>, Baltimore, Maryland, USA, advised by <a href="https://mateodd25.github.io" target="_blank">Mateo Díaz.</a></p>
+    <p>I obtained a MSc in Computer Science in the <a href="https://diro.umontreal.ca/english/home/" target="_blank">   Department of Computer Science and Operations Research </a> at <a href="https://www.umontreal.ca/" target="_blank">Université de Montréal</a> advised by <a href="https://www.didierchetelat.com" target="_blank">Didier Chetelat</a> and <a href="https://tech.cornell.edu/people/andrea-lodi/" target="_blank">Andrea Lodi</a> , affiliated to the <a href="https://cerc-datascience.polymtl.ca/" target="_blank">Canada Excellence Research Chair in Data-Science for Decision-Making</a>.  In addition, I obtained a double major BSc in Computer Science and Mathematics from the same department.</p>
   </section>
 
-  <section id="publications" class="container">
-     <h2>In the pipeline </h2>
-    <ul>
-      <li><strong>Learn to Compare Nodes in Branch and Bound with GNN</strong>, A.G.Labassi, Didier Chetelat, Andrea Lodi. Presented at NeurIPS, 2022.</li>
-    </ul>
-    <h2>Publications</h2>
-    <ul>
-      <li><strong>Learn to Compare Nodes in Branch and Bound with GNN</strong>, A.G.Labassi, Didier Chetelat, Andrea Lodi. Presented at NeurIPS, 2022.</li>
-    </ul>
+  <section id="research">
+    <h2>Research Interest</h2>
+    <p>Optimization and machine learning.</p>
   </section>
 
-  <section id="teaching" class="container">
+  <section id="publications">
+     <h2>Publications/In the pipeline</h2>
+    <ul>
+       <li><strong> Preconditioned subgradient method for composite optimization: overparameterization and fast convergence</strong> <br> with Mateo Dìaz and Liwei Jiang (*), Submitted, 2025. <a href="./pipepline_papers/LMM.pdf" target="_blank">PDF </a></li>
+         <li><strong>Learn to Compare Nodes in Branch and Bound with Graph Neural Networks </strong> <br> with  Didier Chetelat and Andrea Lodi, NeurIPS, 2022. <a href="https://arxiv.org/pdf/2210.16934" target="_blank">PDF </a></li>
+    </ul>
+    (*) indicates alphabetic ordering.
+  </section>
+
+  <section id="teaching">
     <h2>Teaching</h2>
-    <p>I have been a teaching assistant for the following courses:</p>
+    <p> I have held teaching assistant positions for the courses listed below, among others:</p>
     <ul>
-      <li><strong>Optimization for Finance</strong> - Johns Hopkins University, 2022-2023</li>
-      <li><strong>Network Flow Optimization</strong> - Johns Hopkins University, 2022-2023</li>
-      <li><strong>Intro to Algorithmics</strong> - Université de Montréal, 2019-2022</li>
+      <li><strong>AMS661: Optimization for Data Science</strong> - Johns Hopkins University, 2022-2023-2024</li>
+      <li><strong>AMS661: Optimization for Finance</strong> - Johns Hopkins University, 2022-2023-2024</li>
+      <li><strong>AMS663: Network Models </strong> - Johns Hopkins University, 2022-2023</li>
+      <li><strong>IFT2125: Intro to Algorithmics</strong> - Université de Montréal, 2021-2022</li>
+       <li><strong>IFT2105 Intro to Theoretical CS</strong> - Université de Montréal, 2019</li>
     </ul>
   </section>
 
-  <section id="projects" class="container">
+  <section id="projects">
     <h2>Projects</h2>
     <ul>
-      <li><strong>Kaggle Reddit Comment Classification Competition</strong> - Led a team that ranked 4th out of 103 teams using a BERT model.</li>
-      <li><strong>Unsupervised Tweet Clustering for Mental Health</strong> - Collaborated with Health Canada to detect signs of depression and suicidal tendencies from tweets.</li>
+      <li><strong>Kaggle Reddit Comment Classification Competition</strong> -  Team ranked 4th out of 103 teams using a BERT model.</li>
+      <li><strong>Unsupervised Tweet Clustering for Mental Health</strong> - Collaborated with Health Canada Team to detect signs of depression and suicidal tendencies from tweets.</li>
     </ul>
   </section>
 
-  <section id="contact" class="container">
+  <section id="contact">
     <h2>Contact</h2>
-    <p>If you would like to get in touch, feel free to reach out via email at <a href="mailto:alabass1@jhu.edu">alabass1@jhu.edu</a> or connect with me on <a href="https://linkedin.com/in/aglabassi">LinkedIn</a>.</p>
+    <p>If you would like to get in touch, feel free to reach out via email at <a href="mailto:alabass1@jhu.edu">alabass1@jhu.edu</a>. Short emails preferred. </p> 
   </section>
 
   <footer>
     <div class="container">
-      <p>&copy; Abdel Ghani Labassi - 2024. All Rights Reserved.</p>
+      <p>&copy; Abdel Ghani Labassi - 2025. All Rights Reserved.</p>
     </div>
   </footer>
 </body>
